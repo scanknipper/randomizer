@@ -5,7 +5,7 @@ LD= i686-w64-mingw32-g++.exe
 endif
 
 randomizer: main.o randomnamen.o copyfile.o
-	$(CXX) -o randomizer main.o randomnamen.o copyfile.o
+	$(CXX) -o randomizer main.o randomnamen.o copyfile.o --static
 
 
 main.o: main.cpp
