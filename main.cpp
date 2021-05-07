@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 		exit(0);	
 	} 
 
-	if (mkdir(foldername, S_IRWXU | S_IRWXG | S_IRWXO))
+	if (mkdir(foldername)) //, S_IRWXU | S_IRWXG | S_IRWXO))
 	{
 		printf("cannot make folder 'randomized'\n");
 		exit(1);	
