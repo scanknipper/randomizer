@@ -1,16 +1,22 @@
+ifdef MING
+CXX= i686-w64-mingw32-g++.exe
+LD= i686-w64-mingw32-g++.exe
+
+endif
+
 randomizer: main.o randomnamen.o copyfile.o
-	g++ -o randomizer main.o randomnamen.o copyfile.o
+	$(CXX) -o randomizer main.o randomnamen.o copyfile.o
 
 
 main.o: main.cpp
-	g++ -c -Wall main.cpp
+	$(CXX) -c -Wall main.cpp
 
 
 randomnamen.o: randomnamen.cpp
-	g++ -c -Wall randomnamen.cpp
+	$(CXX) -c -Wall randomnamen.cpp
 
 copyfile.o: copyfile.cpp
-	g++ -c -Wall copyfile.cpp
+	$(CXX) -c -Wall copyfile.cpp
 
 
 
